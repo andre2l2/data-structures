@@ -1,0 +1,13 @@
+{
+  "name": "estutura-de-dados-e-algoritimos",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "Andre Ferreira",
+  "license": "ISC",
+  "dependencies": {}
+}

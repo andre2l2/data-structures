@@ -1,0 +1,33 @@
+class StackArray {
+  private _items: string[];
+
+  constructor() {
+    this._items = [];
+  }
+
+  push(...rest: string[]): void {
+    this._items.push(...rest);
+  }
+
+  pop(): string | undefined {
+    return this._items.pop();
+  }
+
+  isEmpty(): boolean {
+    return this._items.length === 0;
+  }
+
+  peek(): string {
+    return this._items[this._items.length - 1];
+  }
+
+  clear(): void {
+    this._items = [];
+  }
+
+  size(): number {
+    return this._items.length;
+  }
+}
+
+export default StackArray;
