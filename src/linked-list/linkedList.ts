@@ -1,7 +1,7 @@
 // LISTA LIGADA (linked list)
 
-import { defaultEquals } from "../util";
-import { Node, Element } from "../models/linked-list-models";
+import { defaultEquals } from '../util';
+import { Node, Element } from '../models/linked-list-models';
 
 interface LinkedListClass {
     push(element: Element): any;
@@ -23,7 +23,18 @@ class LinkedList implements LinkedListClass {
         this.equalFn = undefined;
     }
 
-    push(element: Element) {
+    private _getElementAt(index: number) {
+        if (index >= 0 && index <= this.count) {
+            let node = this.head;
+            for (let i = 0; i < index && node !== null; i++) {
+                node = node.next;
+            }
+            return node;
+        }
+        return undefined;
+    }
+
+    push(element: Element): void {
         const node: Node = new Node(element);
         let current: Node;
 
@@ -53,11 +64,8 @@ class LinkedList implements LinkedListClass {
             if (index === 0) {
                 this.head = current.next;
             } else {
-                let previus = undefined;
-                for (let i = 0; i < index; i++) {
-                    previus = current;
-                    current = current.next;
-                }
+                const previus: any = this._getElementAt(index);
+                current = previus.next;
                 previus.next = current.next;
             }
             this.count--;
@@ -65,6 +73,21 @@ class LinkedList implements LinkedListClass {
         }
         return undefined;
     }
+
+    toString(): string {
+        let str: string = '';
+        for (let c = 0; c < this.count; c++) {
+            const previus: any = this._getElementAt(c);
+            str += previus.element + ' ';
+        }
+        return str;
+    }
 }
+
+const list = new LinkedList();
+list.push(1);
+list.push(2);
+list.push(3);
+console.log(list.toString());
 
 export default LinkedList;
