@@ -14,12 +14,12 @@ interface LinkedListClass {
 
 class LinkedList implements LinkedListClass {
     private count: number;
-    private head: any;
+    private head: Node | null;
     private equalFn: any;
 
     constructor() {
         this.count = 0;
-        this.head = undefined;
+        this.head = null;
         this.equalFn = undefined;
     }
 
@@ -47,7 +47,24 @@ class LinkedList implements LinkedListClass {
 
     indexOf(element: Element) {}
 
-    removeAt(element: Element) {}
+    removeAt(index: number) {
+        if (index >= 0 && index < this.count) {
+            let current: any = this.head;
+            if (index === 0) {
+                this.head = current.next;
+            } else {
+                let previus = undefined;
+                for (let i = 0; i < index; i++) {
+                    previus = current;
+                    current = current.next;
+                }
+                previus.next = current.next;
+            }
+            this.count--;
+            return current.element;
+        }
+        return undefined;
+    }
 }
 
 export default LinkedList;

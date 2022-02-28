@@ -1,7 +1,7 @@
 export type Element = string | number;
 
 export class Node {
-    public element: any;
+    public element: Element;
     public next: any;
 
     constructor(element: Element) {
