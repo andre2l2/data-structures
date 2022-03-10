@@ -1,4 +1,13 @@
-class Queue {
+interface IQueue {
+    readonly enqueue: (element: string) => void;
+    readonly dequeue: () => string | undefined;
+    readonly peek: () => string;
+    readonly isEmpity: () => boolean;
+    readonly size: () => number;
+    readonly clear: () => void;
+    readonly toString: () => string;
+}
+class Queue implements IQueue {
     private _count = 0;
     private _lowestCount = 0;
     private _items: any = {};

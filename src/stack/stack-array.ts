@@ -1,33 +1,42 @@
-class StackArray {
-  private _items: string[];
+interface IStackArray {
+    readonly push: (...rest: string[]) => void;
+    readonly pop: () => string | undefined;
+    readonly isEmpty: () => boolean;
+    readonly peek: () => string;
+    readonly clear: () => void;
+    readonly size: () => number;
+}
 
-  constructor() {
-    this._items = [];
-  }
+class StackArray implements IStackArray {
+    private _items: string[];
 
-  push(...rest: string[]): void {
-    this._items.push(...rest);
-  }
+    constructor() {
+        this._items = [];
+    }
 
-  pop(): string | undefined {
-    return this._items.pop();
-  }
+    push(...rest: string[]): void {
+        this._items.push(...rest);
+    }
 
-  isEmpty(): boolean {
-    return this._items.length === 0;
-  }
+    pop(): string | undefined {
+        return this._items.pop();
+    }
 
-  peek(): string {
-    return this._items[this._items.length - 1];
-  }
+    isEmpty(): boolean {
+        return this._items.length === 0;
+    }
 
-  clear(): void {
-    this._items = [];
-  }
+    peek(): string {
+        return this._items[this._items.length - 1];
+    }
 
-  size(): number {
-    return this._items.length;
-  }
+    clear(): void {
+        this._items = [];
+    }
+
+    size(): number {
+        return this._items.length;
+    }
 }
 
 export default StackArray;
