@@ -15,12 +15,14 @@ interface LinkedListClass {
 class LinkedList implements LinkedListClass {
     private count: number;
     private head: Node | null;
-    private equalFn: any;
+    private equalFn = defaultEquals;
 
     constructor() {
         this.count = 0;
         this.head = null;
-        this.equalFn = undefined;
+    }
+    getElementAt(index: number) {
+        throw new Error('Method not implemented.');
     }
 
     private _getElementAt(index: number) {
@@ -50,13 +52,40 @@ class LinkedList implements LinkedListClass {
         this.count++;
     }
 
-    insert(element: Element, position: any) {}
+    insert(element: Element, position: number): boolean {
+        if (position >= 0 && position <= this.count) {
+            const node = new Node(element);
+            if (position === 0) {
+                const current = this.head;
+                node.next = current;
+                this.head = node;
+            } else {
+                const previus: any = this._getElementAt(position - 1);
+                const current: any = previus.next;
+                node.next = current;
+                previus.next = node;
+            }
+            this.count++;
+            return true;
+        }
+        return false;
+    }
 
-    getElementAt(index: number) {}
+    remove(element: Element) {
+        const index: number = this.indexOf(element);
+        return this.removeAt(index);
+    }
 
-    remove(element: Element) {}
-
-    indexOf(element: Element) {}
+    indexOf(element: Element): number {
+        let current: any = this.head;
+        for (let i = 0; i < this.count && current !== null; i++) {
+            if (this.equalFn<string | number>(element, current.element)) {
+                return i;
+            }
+            current = current.next;
+        }
+        return -1;
+    }
 
     removeAt(index: number) {
         if (index >= 0 && index < this.count) {
@@ -74,6 +103,18 @@ class LinkedList implements LinkedListClass {
         return undefined;
     }
 
+    size(): number {
+        return this.count;
+    }
+
+    isEmpty(): boolean {
+        return this.count === 0;
+    }
+
+    getHead(): unknown {
+        return this.head;
+    }
+
     toString(): string {
         let str: string = '';
         for (let c = 0; c < this.count; c++) {
@@ -83,11 +124,5 @@ class LinkedList implements LinkedListClass {
         return str;
     }
 }
-
-const list = new LinkedList();
-list.push(1);
-list.push(2);
-list.push(3);
-console.log(list.toString());
 
 export default LinkedList;
