@@ -4,12 +4,14 @@ import { defaultEquals } from '../util';
 import { Node, Element } from '../models/linked-list-models';
 
 interface LinkedListClass {
-    push(element: Element): any;
-    insert(element: Element, position: any): any;
-    getElementAt(index: number): any;
+    push(element: Element): void;
+    insert(element: Element, position: number): boolean;
     remove(element: Element): any;
-    indexOf(element: Element): any;
+    indexOf(element: Element): number;
     removeAt(element: Element): any;
+    size(): number;
+    isEmpty(): boolean;
+    getHead(): unknown;
 }
 
 class LinkedList implements LinkedListClass {
@@ -20,9 +22,6 @@ class LinkedList implements LinkedListClass {
     constructor() {
         this.count = 0;
         this.head = null;
-    }
-    getElementAt(index: number) {
-        throw new Error('Method not implemented.');
     }
 
     private _getElementAt(index: number) {

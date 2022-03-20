@@ -2,14 +2,15 @@
 
 ## Temas
 
-- [Parte Um Filas](#parte-um-filas)
-  - [Stack](#stack)
-  - [Queue](#queue)
-  - [Deque](#deque)
-- [Parte Dois Listas Ligadas](#parte-dois-listas-ligadas)
-  - ...
+-   [Filas](#filas)
+    -   [Stack](#stack)
+    -   [Queue](#queue)
+    -   [Deque](#deque)
+-   [Listas Ligadas](#listas-ligadas)
+    -   [Lista Ligada Simples](#lista-ligada-simples)
+    -   [Lista Duplamente ligada](#lista-duplamente-ligada)
 
-## Parte Um Filas
+## Filas
 
 ### Stack
 
@@ -23,6 +24,13 @@ O Queue (fila) é semelhante a Stack mas com algumas particulariedades, pois no 
 
 O Deque é o pricipio de **LIFO** e **FIFO** tudo junto e misturado. Onde pode se remover tanto o primerio da fila quanto o ultimo da fila. Com Deque podemos fazer também uma fila _circular_.
 
-## Parte Dois Listas Ligadas
+## Listas Ligadas
 
-...
+### Lista Ligada Simples
+
+Uma lista ligada tipo de estutura de arrays dinamico, o nome _ligada_ quer dizer que o ultimo elemento da lista aponta para proximo como no exemplo abaixo.
+Se você reparar vai ver que na imagem tem um head, pois é onde guardamos a posição do primeiro elemento, para assim possamos comecar a fazer uma iteração.
+
+![linked_list](./docs/img/linked_list.png)
+
+### Lista Duplamente Ligada
