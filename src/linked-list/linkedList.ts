@@ -15,16 +15,16 @@ interface LinkedListClass {
 }
 
 class LinkedList implements LinkedListClass {
-    private count: number;
-    private head: Node | null;
-    private equalFn = defaultEquals;
+    public count: number;
+    public head: Node | null;
+    public equalFn = defaultEquals;
 
     constructor() {
         this.count = 0;
         this.head = null;
     }
 
-    private _getElementAt(index: number) {
+    getElementAt(index: number) {
         if (index >= 0 && index <= this.count) {
             let node = this.head;
             for (let i = 0; i < index && node !== null; i++) {
@@ -59,7 +59,7 @@ class LinkedList implements LinkedListClass {
                 node.next = current;
                 this.head = node;
             } else {
-                const previus: any = this._getElementAt(position - 1);
+                const previus: any = this.getElementAt(position - 1);
                 const current: any = previus.next;
                 node.next = current;
                 previus.next = node;
@@ -92,7 +92,7 @@ class LinkedList implements LinkedListClass {
             if (index === 0) {
                 this.head = current.next;
             } else {
-                const previus: any = this._getElementAt(index);
+                const previus: any = this.getElementAt(index);
                 current = previus.next;
                 previus.next = current.next;
             }
@@ -117,7 +117,7 @@ class LinkedList implements LinkedListClass {
     toString(): string {
         let str: string = '';
         for (let c = 0; c < this.count; c++) {
-            const previus: any = this._getElementAt(c);
+            const previus: any = this.getElementAt(c);
             str += previus.element + ' ';
         }
         return str;

@@ -2,6 +2,7 @@ export type Element = string | number;
 
 export class Node {
     public element: Element;
+    public prev: any;
     public next: any;
 
     constructor(element: Element, next?: any) {
@@ -10,11 +11,8 @@ export class Node {
     }
 }
 
-class DoublyNode extends Node {
-    private readonly _prev;
-
-    constructor(element, next, prev) {
-        super(element, next);
-        this._prev = prev;
+export class DoublyNode extends Node {
+    constructor(element: Element) {
+        super(element);
     }
 }
