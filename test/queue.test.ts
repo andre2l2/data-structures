@@ -1,28 +1,35 @@
 import Queue from '../src/queue/queue';
 
-const queue = new Queue();
-queue.enqueue('One');
-queue.enqueue('Two');
-queue.enqueue('Three');
-queue.enqueue('Four');
+describe('Queue', () => {
+  let spy: Queue;
 
-test('Add in queue and tesy size', () => {
-    expect(queue.size()).toBe(4);
-});
+  beforeEach(() => {
+    spy = new Queue();
 
-test('Add and test isEmpity', () => {
-    expect(queue.isEmpity()).toBe(false);
-});
+    spy.enqueue('One');
+    spy.enqueue('Two');
+    spy.enqueue('Three');
+    spy.enqueue('Four');
+  });
 
-test('Remove items', () => {
-    queue.dequeue();
-    expect(queue.size()).toBe(3);
-});
+  test('Add in queue and tesy size', () => {
+    expect(spy.size()).toBe(4);
+  });
 
-test('Get peek item', () => {
-    expect(queue.peek()).toEqual('Two');
-});
+  test('Add and test isEmpity', () => {
+    expect(spy.isEmpity()).toBe(false);
+  });
 
-test('Get toString', () => {
-    expect(queue.toString()).toEqual('Two Three Four ');
+  test('Remove items', () => {
+    spy.dequeue();
+    expect(spy.size()).toBe(3);
+  });
+
+  test('Get peek item', () => {
+    expect(spy.peek()).toEqual('One');
+  });
+
+  test('Get toString', () => {
+    expect(spy.toString()).toEqual('One Two Three Four ');
+  });
 });

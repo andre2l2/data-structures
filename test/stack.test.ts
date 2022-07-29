@@ -1,40 +1,47 @@
 import StackObject from '../src/stack/stack-object';
 
-const stack = new StackObject();
-stack.push('One');
-stack.push('Two');
-stack.push('Three');
-stack.push('Four');
+describe('StackObject', () => {
+  let spy: StackObject;
 
-test('Add elements and test soze', () => {
-    expect(stack.suze()).toBe(4);
-});
+  beforeEach(() => {
+    spy = new StackObject();
 
-test('Add elements and test toString', () => {
-    expect(stack.toString()).toEqual('One Two Three Four ');
-});
+    spy.push('One');
+    spy.push('Two');
+    spy.push('Three');
+    spy.push('Four');
+  });
 
-test('Add elements and remove one', () => {
-    expect(stack.pop()).toEqual('Four');
-});
+  test('Add elements and test soze', () => {
+    expect(spy.suze()).toBe(4);
+  });
 
-test('Add elements and check if has elements', () => {
-    expect(stack.isEmpty()).toBe(false);
-});
+  test('Add elements and test toString', () => {
+    expect(spy.toString()).toEqual('One Two Three Four ');
+  });
 
-test('get lest element', () => {
-    expect(stack.peek()).toEqual('Three');
-});
+  test('Add elements and remove one', () => {
+    expect(spy.pop()).toEqual('Four');
+  });
 
-test('isEmpity is true', () => {
-    stack.pop();
-    stack.pop();
-    stack.pop();
-    expect(stack.isEmpty()).toBe(true);
-});
+  test('Add elements and check if has elements', () => {
+    expect(spy.isEmpty()).toBe(false);
+  });
 
-test('clear all', () => {
-    stack.push('One');
-    stack.clear();
-    expect(stack.isEmpty()).toBe(true);
+  test('get lest element', () => {
+    expect(spy.peek()).toEqual('Four');
+  });
+
+  test('isEmpity is true', () => {
+    spy.pop();
+    spy.pop();
+    spy.pop();
+    expect(spy.isEmpty()).toBe(false);
+  });
+
+  test('clear all', () => {
+    spy.push('One');
+    spy.clear();
+    expect(spy.isEmpty()).toBe(true);
+  });
 });
