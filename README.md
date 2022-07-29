@@ -2,13 +2,15 @@
 
 ## Temas
 
--   [Filas](#filas)
-    -   [Stack](#stack)
-    -   [Queue](#queue)
-    -   [Deque](#deque)
--   [Listas Ligadas](#listas-ligadas)
-    -   [Lista Ligada Simples](#lista-ligada-simples)
-    -   [Lista Duplamente ligada](#lista-duplamente-ligada)
+- [Filas](#filas)
+  - [Stack](#stack)
+  - [Queue](#queue)
+  - [Deque](#deque)
+- [Listas Ligadas](#listas-ligadas)
+  - [Lista Ligada Simples](#lista-ligada-simples)
+  - [Lista Duplamente ligada](#lista-duplamente-ligada)
+- [Conjuntos](#conjuntos)
+  - [O que é um conjunto?](#o-que-é-um-conjunto)
 
 ## Filas
 
@@ -33,4 +35,9 @@ Se você reparar vai ver que na imagem tem um head, pois é onde guardamos a pos
 
 ![linked_list](./docs/img/linked_list.png)
 
-### Lista Duplamente Ligada
+## Conjuntos
+
+### O que é um conjunto?
+
+Os Conjuntos ou Set é um tipo de estrutura de dados para salvar dados que
+não podem se repetir, bem semelahnte ao proprio Set nativo do Javascript.
