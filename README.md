@@ -11,6 +11,10 @@
   - [Lista Duplamente ligada](#lista-duplamente-ligada)
 - [Conjuntos](#conjuntos)
   - [O que é um conjunto?](#o-que-é-um-conjunto)
+  - [União](#união-aub)
+  - [Intersecção](#intersecção-anb)
+  - [Diferença](#diferença-a-b)
+  - [Subconjunto](#subconjunto-acb)
 
 ## Filas
 
@@ -41,3 +45,27 @@ Se você reparar vai ver que na imagem tem um head, pois é onde guardamos a pos
 
 Os Conjuntos ou Set é um tipo de estrutura de dados para salvar dados que
 não podem se repetir, bem semelahnte ao proprio Set nativo do Javascript.
+
+### União (**AuB**)
+
+Retorna um novo conjunto de dados que pertença aos dois conjuntos, como no exemplo abaixo onde AuB.
+
+<img src="https://i.ytimg.com/vi/-d_Lb0UfZfE/maxresdefault.jpg" width="400px"/>
+
+### Intersecção (**AnB**)
+
+Retorna a um novo conjunto com os elementos de ambos os elementos, como no exemplo abaixo AnB.
+
+<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F_PPcv9MRb26c%2FTUinpWfgBYI%2FAAAAAAAAAL4%2FIuZlSd1mgTk%2Fs1600%2Fimage042.gif&f=1&nofb=1" width="400px"/>
+
+### Diferença (**A-B**)
+
+Retorna um novo conjunto com todos os elementos apenas do primeiro conjunto.
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs2.static.brasilescola.uol.com.br%2Fbe%2F2020%2F02%2Foperacoes-representacao-grafica-diferenca.jpg&f=1&nofb=1" width="400px"/>
+
+### Subconjunto (**AcB**)
+
+Confirma de um conjunto é um subconjunto de outro
+
+<img src="https://static.todamateria.com.br/upload/su/bc/subconjunto.jpg" width="400px"/>
