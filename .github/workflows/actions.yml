@@ -1,5 +1,10 @@
-name: testing
-on: [push]
+name: Testing
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   testing:
     runs-on: ubuntu-latest
