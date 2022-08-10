@@ -1,4 +1,4 @@
-import { defaultToString } from '../../src/util';
+import { defaultToString } from '@/util';
 
 describe('defaultToString', () => {
   let spy: typeof defaultToString;

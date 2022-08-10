@@ -16,6 +16,7 @@
   - [Diferença](#diferença-a-b)
   - [Subconjunto](#subconjunto-acb)
 - [Mapas/Dicionarios](#mapasdicionarios)
+  - [Dicionarios](#dicionarios)
 
 ## Filas
 
@@ -72,3 +73,5 @@ Confirma de um conjunto é um subconjunto de outro
 <img src="https://static.todamateria.com.br/upload/su/bc/subconjunto.jpg" width="400px"/>
 
 ## Mapas/Dicionarios
+
+### Dicionarios
