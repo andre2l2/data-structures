@@ -1,4 +1,4 @@
-import Queue from '@/queue/queue';
+import Queue from '../src/queue/queue';
 
 describe('Queue', () => {
   let spy: Queue;

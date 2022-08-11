@@ -1,4 +1,4 @@
-import DoublyLinkedList from '@/linked-list/doubly-linked-list';
+import DoublyLinkedList from '../src/linked-list/doubly-linked-list';
 
 describe('DoublyLinkedList', () => {
   let spy: DoublyLinkedList;
