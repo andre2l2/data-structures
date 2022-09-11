@@ -1,5 +1,5 @@
-import { HashTable } from '../../src/hash-table/hash-table';
-import { defaultToString } from '../../src/util';
+import { HashTable } from '../../../src/data-structures/hash-table/hash-table';
+import { defaultToString } from '../../../src/util';
 
 describe('HashTable', () => {
   let spy: HashTable;

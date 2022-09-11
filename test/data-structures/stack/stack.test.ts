@@ -1,4 +1,4 @@
-import StackObject from '../src/stack/stack-object';
+import StackObject from '../../../src/data-structures/stack/stack-object';
 
 describe('StackObject', () => {
   let spy: StackObject;

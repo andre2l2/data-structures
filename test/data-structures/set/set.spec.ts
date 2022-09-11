@@ -1,4 +1,4 @@
-import { SetElements } from '../src/set/set';
+import { SetElements } from '../../../src/data-structures/set/set';
 
 describe('SetElements', () => {
   let spy: SetElements;
