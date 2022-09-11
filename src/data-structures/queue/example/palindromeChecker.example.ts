@@ -1,10 +1,10 @@
-import Deque from "../daque";
+import Deque from '../daque';
 
 function palindromeChecker(aString: string): boolean {
   if (!aString) return false;
 
   const deque = new Deque();
-  const lowerString = aString.toLocaleLowerCase().split(" ").join("");
+  const lowerString = aString.toLocaleLowerCase().split(' ').join('');
   let isEqual = true;
   let firstChar: any, lastChar: any;
 
@@ -23,5 +23,5 @@ function palindromeChecker(aString: string): boolean {
   return isEqual;
 }
 
-const resp = palindromeChecker("ame a ema");
+const resp = palindromeChecker('ame a ema');
 console.log(resp);

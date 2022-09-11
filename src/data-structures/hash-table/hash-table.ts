@@ -1,4 +1,4 @@
-import { defaultToString, ValuePair } from '../util';
+import { defaultToString, ValuePair } from '../../util';
 
 export class HashTable {
   private table!: Record<string, ValuePair>;

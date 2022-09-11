@@ -1,12 +1,12 @@
-import StackArray from "../stack-array";
+import StackArray from '../stack-array';
 
 function decimalConverter(decimal: number, base: number): string {
   const stack = new StackArray();
-  const digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let contoller = decimal;
-  let binaryToString = "";
+  let binaryToString = '';
 
-  if (base < 2 || base > 36) return "";
+  if (base < 2 || base > 36) return '';
 
   while (contoller > 0) {
     stack.push(Math.floor(contoller % base).toString());

@@ -1,4 +1,4 @@
-import { defaultToString, ValuePair } from '../util';
+import { defaultToString, ValuePair } from '../../util';
 
 export class Dictionary {
   private table!: Record<string, ValuePair>;
